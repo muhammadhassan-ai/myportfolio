@@ -1,0 +1,83 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design system: dark tech portfolio theme.
+   All colors are HSL.
+*/
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('https://resource-static.bj.bcebos.com/fonts/Montserrat-VariableFont_wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    --background: 222 47% 5%;
+    --foreground: 220 14% 90%;
+    --card: 222 41% 10%;
+    --card-foreground: 220 14% 90%;
+    --popover: 222 41% 10%;
+    --popover-foreground: 220 14% 90%;
+    --primary: 190 80% 55%;
+    --primary-foreground: 222 47% 5%;
+    --secondary: 217 32% 16%;
+    --secondary-foreground: 220 14% 90%;
+    --muted: 217 32% 16%;
+    --muted-foreground: 215 14% 62%;
+    --accent: 260 80% 65%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --border: 217 24% 17%;
+    --input: 217 24% 17%;
+    --ring: 190 80% 55%;
+    --chart-1: 190 80% 55%;
+    --chart-2: 260 80% 65%;
+    --chart-3: 43 74% 66%;
+    --chart-4: 220 70% 50%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 222 47% 5%;
+    --sidebar-foreground: 220 14% 90%;
+    --sidebar-primary: 190 80% 55%;
+    --sidebar-primary-foreground: 222 47% 5%;
+    --sidebar-accent: 217 32% 16%;
+    --sidebar-accent-foreground: 220 14% 90%;
+    --sidebar-border: 217 24% 17%;
+    --sidebar-ring: 190 80% 55%;
+    --destructive-foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
